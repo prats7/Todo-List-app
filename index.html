@@ -4,12 +4,12 @@
         <link href="styles.css" rel="stylesheet" />
     </head>
     <body>
-        <h1>Todo List</h1>
 
-        <div id="container">
+        <h1>Todo List</h1>
+        <form>
             <input type="text" id="todo-input" />
-            <button class="todo-button" type="submit">Add Task</button>
-        </div>
+            <button id="todo-button" type="submit">Add Task</button>
+        </form>
         <div class="todo-container">
             <ul class="todo-list"></ul>
         </div>
@@ -25,6 +25,7 @@
                 <button id="completed">Completed</button>
                 <button id="uncompleted">Uncompleted</button>
             </div>
+        </div>
         </div>
         <script src="./app.js"></script>
     </body>
