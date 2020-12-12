@@ -7,10 +7,11 @@ const todoCounter = document.getElementById('tasks-counter');
 //List array
 let todos = [];
 
+//Event Listeners function
 function initializeTodoList() {
 
-
-    todoButton.addEventListener('click',function(event){
+    //Todo button
+    todoButton.addEventListener('click',function(){
         const text = todoInput.value;
     
         const todo = {
@@ -22,8 +23,10 @@ function initializeTodoList() {
         todoInput.value="";
     });
 
+    //delete button
     document.addEventListener('click', handleOnClick);
-    
+
+    //Keyboard Enter
     document.addEventListener('keyup', function (event) {
         const text = event.target.value;
         if (event.key === 'Enter') {
@@ -41,6 +44,7 @@ function initializeTodoList() {
     renderTodo();
 }
 
+//create todo
 function todoDOM(todo) {
 
     const list = document.createElement('list');
@@ -52,7 +56,7 @@ function todoDOM(todo) {
     todoList.appendChild(list);
 }
 
-
+//Display Todo
 function renderTodo() {
     todoList.innerHTML = '';
 
@@ -63,7 +67,7 @@ function renderTodo() {
     todoCounter.innerHTML = todos.length;
 }
 
-
+//Add Todo
 function addTodo(todo) {
     if (todo) {
         todos.push(todo)
@@ -72,6 +76,7 @@ function addTodo(todo) {
     }
 }
 
+//Delete todo
 function deleteTodo(e) {
     const filterTask = todos.filter(todo => todo.id !== e);
 
@@ -79,6 +84,7 @@ function deleteTodo(e) {
     renderTodo();
 }
 
+//Check Todo
 function checkTodo(id) {
     const index = todos.findIndex(function (todo) {
         return todo.id === id
@@ -86,14 +92,12 @@ function checkTodo(id) {
     todos[index].done = !todos[index].done;
 }
 
+//Delete todo button
 function handleOnClick(e) {
     if (e.target.className === 'delete') {
         const id = Number(e.target.dataset.id);
         deleteTodo(id);
     }
 }
-
-
-
 
 initializeTodoList();
