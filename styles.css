@@ -2,37 +2,32 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
 }
-body {
-  background-image: white;
-  color: black;
-  font-family: "Poppins", sans-serif;
-  min-height: 250vh;
-}
+
 h1 {
-  font-size: 30px;
   text-align: center;
 }
 
-form {
-  min-height: 20vh;
+#container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: grey;
+  margin: 0 auto;
 }
 
-form input {
+
+#todo-input {
   padding: 0.5rem;
-  font-size: 2rem;
-  background: white;
+  font-size: 1rem;
+  background: lightcyan;
 }
 
-form button {
+#todo-button {
   padding: 0.5rem;
-  font-size: 2rem;
-  background: rgb(145, 145, 228);
-  color: darkslategrey;
+  font-size: 1rem;
+  background: lightgreen;
+  color: rgb(13, 17, 20);
   cursor: pointer;
 }
 
@@ -40,27 +35,23 @@ form button {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: antiquewhite;
+  text-align: center;
 }
 
-.filter-container {
-  background: grey;
-  min-height: 20vh;
-  display: flex;
-  justify-items: baseline;
-  align-items: center;
-  font-size: 1rem;
-}
-
-.todo-list {
+#todo-list {
   min-width: 30%;
   list-style: none;
 }
 
-.total {
-  align-items: flex-start;
-
+#total {
+  text-align: center;
+  font-size: medium;
 }
 
-.select {
-  align-items: flex-end;
+#total-tasks {
+  margin-top: 30%;
+  border-top: 20vh;
 }
+
+

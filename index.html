@@ -1,32 +1,29 @@
 <html>
-    <head>
-        <title>Todo List</title>
-        <link href="styles.css" rel="stylesheet" />
-    </head>
-    <body>
 
-        <h1>Todo List</h1>
-        <form>
-            <input type="text" id="todo-input" />
-            <button id="todo-button" type="submit">Add Task</button>
-        </form>
-        <div class="todo-container">
-            <ul class="todo-list"></ul>
-        </div>
-        <div id="output">
-            <p id="output-value"></p>
-        </div>
-        <div class="filter-container">
-            <div class="total">
-                <span id="total-tasks">Total Todo: <span id="tasks-counter">0</span></span>
-            </div>
-            <div class="select">
-                <button id="all">All</button>
-                <button id="completed">Completed</button>
-                <button id="uncompleted">Uncompleted</button>
-            </div>
-        </div>
-        </div>
-        <script src="./app.js"></script>
-    </body>
+<head>
+    <title>Todo List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <h1>Todo List</h1>
+
+    <div id="container">
+        <input type="text" id="todo-input" />
+        <button id="todo-button" type="submit">Add Task</button>
+    </div>
+
+
+    <div class="todo-container">
+        <ul id="todo-list"></ul>
+    </div>
+    <div id="total">
+        <span id="total-tasks">Tasks: <span id="tasks-counter">0</span></span>
+    </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
 </html>
